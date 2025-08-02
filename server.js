@@ -17,7 +17,7 @@ const __dirname = path.resolve();
 console.log("Initializing Express app");
 app.use(
   cors({
-    origin: ["https://your-frontend-url.com"],
+    origin: ["https://pareshportfolio-inke.vercel.app/"],
     methods: ["GET", "POST"],
     credentials: true,
   })
