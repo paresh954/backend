@@ -17,10 +17,12 @@ const __dirname = path.resolve();
 console.log("Initializing Express app");
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173", // Allow frontend origin
+    origin: ["https://your-frontend-url.com"],
+    methods: ["GET", "POST"],
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 const mountRoute = (path, routes) => {
